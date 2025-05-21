@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+    <link rel = "icon" href = 
+"images/logo.png"
+        type = "image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Anton" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .section-title {
+      margin: 2rem 0;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .gallery-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(25% - 1rem);
+      max-width: calc(25% - 1rem);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 992px) {
+      .gallery-item {
+        flex: 1 1 calc(33.33% - 1rem);
+        max-width: calc(33.33% - 1rem);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .gallery-item img {
+        height: auto;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+ <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <!-- Mobile Menu Structure -->
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a href="index.html" class="text-black">
+            <img src="images/logo.png" style="width:30px; margin-right:10px;">
+            <span class="text-primary">HappyPaws</span>
+          </a>
+        </div>
+        <nav class="site-navigation text-center ml-auto" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+            <li><a href="index.html#home-section" class="nav-link">Home</a></li>
+            <li><a href="index.html#about-section" class="nav-link">About</a></li>
+            <li><a href="index.html#discover-section" class="nav-link">Projects</a></li>
+            <li class="active"><a href="index.html#donate-section" class="nav-link active">Join Us</a></li>
+            <li><a href="index.html#notice-board-section" class="nav-link">Notice</a></li>
+            <li><a href="index.html#contact-section" class="nav-link">Contact</a></li> 
+          </ul>
+        </nav>
+
+        <div class="toggle-button d-inline-block d-lg-none">
+          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+            <span class="icon-menu h3"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <div class="container">
+    <h2 class="section-title text-center mt-5">Full Gallery</h2>
+    <div class="gallery-wrapper" id="full-gallery"></div>
+  </div>
+
+  <!-- JS to Dynamically Load Gallery Images -->
+  <script>
+    const container = document.getElementById("full-gallery");
+    const totalImages = 28; // Adjust based on your gallery count
+
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement("img");
+      img.src = `images/fullgallery/img${i}.jpg`;
+      img.alt = `Gallery Image ${i}`;
+      img.className = "gallery-img";
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "gallery-item";
+      wrapper.appendChild(img);
+
+      container.appendChild(wrapper);
+    }
+  </script>
+
+  <!-- JS Dependencies (must be at the end) -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+
+</html>
